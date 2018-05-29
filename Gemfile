@@ -5,6 +5,7 @@ ruby '2.4.4'
 gem 'cloudinary'
 gem 'carrierwave'
 gem 'devise'
+gem 'faker'
 
 gem 'bootsnap', require: false
 gem 'figaro'
