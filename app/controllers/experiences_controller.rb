@@ -2,7 +2,8 @@ class ExperiencesController < ApplicationController
   before_action :set_experience, only: [:show, :edit, :update, :destroy]
 
   def index
-    @experiences = Experience.all.limit(15)
+    @experiences = Experience.all
+
   end
 
   def show

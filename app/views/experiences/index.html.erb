@@ -1,10 +1,8 @@
 
 <div class="card-grid">
   <div class="row no-gutters">
-    <% @experiences.each do |experience| %>
-    <div class="col-sm-4">
-      <%= render partial: "shared/card", :locals => {experience: experience}%>
-    </div>
+    <% @experiences.in_groups_of(5, Experience.new) do |group| %>
+        <%= group_cards_experiences(group) %>
     <%end%>
   </div>
 </div>
