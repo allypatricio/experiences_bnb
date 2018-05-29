@@ -36,6 +36,7 @@
   border-radius: 3px
 }
 
+
 .form-container {
   background-image: url("lisbon-2.jpeg");
   background-size: cover;
@@ -46,4 +47,11 @@
 }
 
 
+
+.form-card-edit-user {
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  padding: 30px;
+  background-color: white;
+}
 
