@@ -1,0 +1,36 @@
+<div class="navbar-xp">
+  <!-- Logo -->
+  <a href="/" class="navbar-xp-brand">
+    <%= image_tag('logo') %>
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-xp-right hidden-xs hidden-sm">
+
+    <p  class="navbar-xp-item navbar-xp-link-welcome">Welcome</p>
+    <p class="navbar-xp-item navbar-xp-link-name">"name"</p>
+
+    <!-- Profile picture with dropdown list -->
+    <div class="navbar-xp-item">
+      <div class="dropdown">
+        <img src="https://kitt.lexp.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-xp-menu" data-toggle="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-xp-dropdown-menu">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-xp-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-xp-dropdown-menu">
+        <li><p>Welcome</p></li>
+        <li><p>"name"</p></li>
+      </ul>
+    </div>
+  </div>
+</div>
