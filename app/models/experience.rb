@@ -7,4 +7,7 @@ class Experience < ApplicationRecord
 
   validates :category, inclusion: { in: CATEGORIES }
   validates :address, :title, :description, :price, :duration, :category, presence: :true
+
+  mount_uploader :photo, PhotoUploader
+
 end

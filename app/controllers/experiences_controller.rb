@@ -34,6 +34,9 @@ class ExperiencesController < ApplicationController
   end
 
   private
+  def article_params
+  params.require(:experience).permit(:photo)
+end
 
   def set_experience
     @experience = Experience.find(params[:id])
