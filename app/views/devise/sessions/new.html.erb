@@ -1,5 +1,6 @@
 <div class="row">
   <div class="col-sm-4 col-sm-offset-4">
+    <div class="form-card">
     <h1>Log In</h1>
 
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -13,5 +14,6 @@
       <%= f.button :submit, "Log In", :class => "form-button" %>
     </div>
     <% end %>
+    </div>
   </div>
 </div>
