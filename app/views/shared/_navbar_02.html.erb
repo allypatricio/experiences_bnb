@@ -17,7 +17,16 @@
     <!-- Profile picture with dropdown list -->
     <div class="navbar-xp-item">
       <div class="dropdown">
-        <img src="https://kitt.lexp.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-xp-menu" data-toggle="dropdown">
+        <% if User.instance_methods.include? 'photo' %>
+          <% if current_user.photo == nil %>
+          <i class="far fa-user dropdown-toggle" id="navbar-xp-menu" data-toggle="dropdown"></i>
+          <% else %>
+          <%= cl_image_tag current_user.photo, height: 100, width: 100, crop: :fill %>
+        <%end%>
+        <%else%>
+          <i class="far fa-user dropdown-toggle" id="navbar-xp-menu" data-toggle="dropdown"></i>
+        <%end%>
+
         <ul class="dropdown-menu dropdown-menu-right navbar-xp-dropdown-menu">
           <li><a href="#">Profile</a></li>
           <li><a href="#">Dashboard</a></li>
