@@ -22,5 +22,8 @@ class ExperiencesController < ApplicationController
   end
 
   private
+  def article_params
+  params.require(:experience).permit(:photo)
+end
 
 end
