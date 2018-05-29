@@ -8,7 +8,11 @@
   <div class="navbar-xp-right hidden-xs hidden-sm">
 
     <p  class="navbar-xp-item navbar-xp-link-welcome">Welcome</p>
-    <p class="navbar-xp-item navbar-xp-link-name">"name"</p>
+    <% if current_user.first_name == nil %>
+    <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.email %></p>
+    <% else %>
+      <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.first_name %></p>
+      <% end %>
 
     <!-- Profile picture with dropdown list -->
     <div class="navbar-xp-item">
@@ -17,7 +21,7 @@
         <ul class="dropdown-menu dropdown-menu-right navbar-xp-dropdown-menu">
           <li><a href="#">Profile</a></li>
           <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Log Out</a></li>
+          <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
         </ul>
       </div>
     </div>
@@ -29,7 +33,11 @@
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-xp-dropdown-menu">
         <li><p>Welcome</p></li>
-        <li><p>"name"</p></li>
+        <li>  <% if current_user.first_name == nil %>
+    <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.email %></p>
+    <% else %>
+      <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.first_name %></p>
+      <% end %></li>
       </ul>
     </div>
   </div>
