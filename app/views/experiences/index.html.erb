@@ -1,22 +1,10 @@
+
 <div class="card-grid">
   <div class="row no-gutters">
-    <div class="col-sm-6">
-      <%= render 'shared/card' %>
-    </div>
-    <div class="col-sm-6">
-      <%= render 'shared/card' %>
-    </div>
-  </div>
-
-  <div class="row no-gutters">
+    <% @experiences.each do |experience| %>
     <div class="col-sm-4">
-      <%= render 'shared/card' %>
+      <%= render partial: "shared/card", :locals => {experience: experience}%>
     </div>
-    <div class="col-sm-4">
-      <%= render 'shared/card' %>
-    </div>
-    <div class="col-sm-4">
-      <%= render 'shared/card' %>
-    </div>
+    <%end%>
   </div>
 </div>

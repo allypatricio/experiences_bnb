@@ -1,15 +1,19 @@
 <div class="card">
-  <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0)), url('http://via.placeholder.com/450x250');">
-  <span class="card-category">Sport</span>
+  <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0)), url(<%=experience.photo%>);">
+  <span class="card-category"><%=experience.category%></span>
       <div class="card-description">
-        <h2>Go play football</h2>
-        <p>with locals</p>
+        <h2><%=experience.title%></h2>
+        <p>duration: <%=experience.duration%>h</p>
       </div>
-      <img class="card-user avatar avatar-large" src="http://via.placeholder.com/80x80">
-      <a class="card-link" href="#" ></a>
+       <% if experience.user.photo.url == nil %>
+          <i class="far fa-user card-user avatar avatar-large"></i>
+          <% else %>
+          <%= image_tag experience.user.photo.url(:thumnail), :class => "far fa-user card-user avatar avatar-large"%>
+        <%end%>
+      <%=link_to "", experience_path(experience), :class => "card-link" %>
   </div>
   <div class="card-footer">
-    <p>15€ in Lisbon, Campolide</p>
+    <p><%=experience.price%>€ in <%=experience.address%></p>
     <div class="controls">
       <a href="#"><i class="fa fa-star"></i></a>
       <a href="#"><i class="fa fa-share"></i></a>
