@@ -5,6 +5,11 @@ class ExperiencesController < ApplicationController
   end
 
   def show
+    @markers = [{
+      lat: @experience.latitude,
+      lng: @experience.longitude
+    }]
+    # raise
   end
 
   def new
