@@ -1,2 +1,27 @@
-show
-<%= link_to "book me", new_experience_booking_path(Experience.first) %>
+<div id="banner">
+</div>
+
+<div class="experience-top-section">
+ <h1><%= @experience.title %></h1>
+ <ul class="list-unstyled">
+  <li><%= @experience.category %></li>
+  <li><%= @experience.duration %></li>
+</ul>
+<div class="avatar">avatar</div>
+</div>
+
+<div class="experience-bottom-section">
+  <div class="box-left">
+    <p><%= @experience.description %></p>
+    <div><%= @experience.price %>
+      <a href="#" class="btn btn-primary">Book</a>
+    </div>
+    </div>
+    <div class="box-right">map</div>
+  </div>
+</div>
+
+<%link_to "book me", new_experience_booking_path(Experience.first) %>
+
+
+
