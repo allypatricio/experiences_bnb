@@ -1,2 +1,9 @@
 show
 <%= link_to "book me", new_experience_booking_path(Experience.first) %>
+
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+></div>
