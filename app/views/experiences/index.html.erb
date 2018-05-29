@@ -1,22 +1,8 @@
+
 <div class="card-grid">
   <div class="row no-gutters">
-    <div class="col-sm-6">
-      <%= render 'shared/card' %>
-    </div>
-    <div class="col-sm-6">
-      <%= render 'shared/card' %>
-    </div>
-  </div>
-
-  <div class="row no-gutters">
-    <div class="col-sm-4">
-      <%= render 'shared/card' %>
-    </div>
-    <div class="col-sm-4">
-      <%= render 'shared/card' %>
-    </div>
-    <div class="col-sm-4">
-      <%= render 'shared/card' %>
-    </div>
+    <% @experiences.in_groups_of(5, Experience.new) do |group| %>
+        <%= group_cards_experiences(group) %>
+    <%end%>
   </div>
 </div>
