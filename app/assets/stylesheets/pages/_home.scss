@@ -1,1 +1,15 @@
 // Specific CSS for your home-page
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
