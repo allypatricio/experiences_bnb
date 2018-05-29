@@ -6,10 +6,31 @@
   margin: 0;
   text-align: center;
   color: white;
+  background: #86E7DF;
+  opacity: 0.8;
 }
 .alert-info {
-  background: $green;
+  background: #86E7DF;
+  opacity: 0.8;
 }
 .alert-warning {
   background: $red;
+  opacity: 0.8;
 }
+
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+

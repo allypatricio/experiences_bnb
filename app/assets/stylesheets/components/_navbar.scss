@@ -1,5 +1,5 @@
 /* Main navbar */
-.navbar-wagon {
+.navbar-xp {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
   transition: all 0.3s ease;
@@ -11,47 +11,74 @@
 }
 
 /* Logo */
-.navbar-wagon-brand img {
+.navbar-xp-brand img {
   height: 50px;
 }
 
 /* User Avatar */
-.navbar-wagon .avatar {
-  height: 35px;
-  width: 35px;
+.navbar-xp .avatar {
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
+  border: 1px solid #86E7DF;
 }
 
 /* Right section */
-.navbar-wagon-right {
+.navbar-xp-right {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  p {
+    margin-bottom: 0px;
+  }
 }
 
 /* Basic navbar item */
-.navbar-wagon-item {
+.navbar-xp-item {
   cursor: pointer;
   padding: 0 20px;
 }
 
 /* Navbar link */
-.navbar-wagon-link {
-  color: #616668;
-  font-size: 14px;
+.navbar-xp-link-01 {
+  color: #2c2d33;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  padding-right: 20px;
+  border-right: 1px solid #86E7DF;
 }
-.navbar-wagon-link:hover {
-  color: #da552f;
+.navbar-xp-link-welcome {
+  color: #2c2d33;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  padding-right: 20px;
+  border-right: 1px solid #86E7DF;
+}
+.navbar-xp-link {
+  color: #2c2d33;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+.navbar-xp-link-name {
+  color: #2c2d33;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+.navbar-xp-link-01:hover {
+  color: #79E0B5;
   text-decoration: none;
 }
-
+.navbar-xp-link:hover {
+  color: #79E0B5;
+  text-decoration: none;
+}
 /* Dropdown menu */
-.navbar-wagon-dropdown-menu {
+.navbar-xp-dropdown-menu {
   margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
   border-color: #E6E6E6;
 }
-.navbar-wagon-dropdown-menu li > a {
+.navbar-xp-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
   color: #999999 !important;
@@ -59,11 +86,11 @@
   line-height: 22px !important;
   padding: 10px 20px;
 }
-.navbar-wagon-dropdown-menu li > a:hover {
+.navbar-xp-dropdown-menu li > a:hover {
   background: transparent !important;
   color: black !important;
 }
-.navbar-wagon-dropdown-menu:before {
+.navbar-xp-dropdown-menu:before {
   content: ' ';
   height: 10px;
   width: 10px;

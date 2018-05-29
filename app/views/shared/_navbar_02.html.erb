@@ -1,0 +1,53 @@
+<div class="navbar-xp">
+  <!-- Logo -->
+  <a href="/" class="navbar-xp-brand">
+    <%= image_tag('Xperience') %>
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-xp-right hidden-xs hidden-sm">
+
+    <p  class="navbar-xp-item navbar-xp-link-welcome">Welcome</p>
+    <% if current_user.first_name == nil %>
+    <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.email %></p>
+    <% else %>
+      <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.first_name %></p>
+      <% end %>
+
+    <!-- Profile picture with dropdown list -->
+    <div class="navbar-xp-item">
+      <div class="dropdown">
+        <% if User.instance_methods.include? 'photo' %>
+          <% if current_user.photo == nil %>
+          <i class="far fa-user dropdown-toggle" id="navbar-xp-menu" data-toggle="dropdown"></i>
+          <% else %>
+          <%= cl_image_tag current_user.photo, height: 100, width: 100, crop: :fill %>
+        <%end%>
+        <%else%>
+          <i class="far fa-user dropdown-toggle" id="navbar-xp-menu" data-toggle="dropdown"></i>
+        <%end%>
+
+        <ul class="dropdown-menu dropdown-menu-right navbar-xp-dropdown-menu">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-xp-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-xp-dropdown-menu">
+        <li><p>Welcome</p></li>
+        <li>  <% if current_user.first_name == nil %>
+    <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.email %></p>
+    <% else %>
+      <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.first_name %></p>
+      <% end %></li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="navbar-xp">
+  <!-- Logo -->
+  <a href="/" class="navbar-xp-brand">
+   <%= image_tag('Xperience') %>
+ </a>
+
+ <!-- Right Navigation -->
+ <div class="navbar-xp-right hidden-xs hidden-sm">
+<%= link_to 'Sign Up', new_user_registration_path, :class => "navbar-xp-item navbar-xp-link-01" %>
+<%= link_to 'Log In', new_user_session_path, :class => "navbar-xp-item navbar-xp-link" %>
+</div>
+
+<!-- Dropdown appearing on mobile only -->
+<div class="navbar-xp-item hidden-md hidden-lg">
+  <div class="dropdown">
+    <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+    <ul class="dropdown-menu dropdown-menu-right navbar-xp-dropdown-menu">
+      <li><%= link_to 'Sign Up', new_user_registration_path, :class => "navbar-xp-item navbar-xp-link-01" %></li>
+      <li><%= link_to 'Log In', new_user_session_path, :class => "navbar-xp-item navbar-xp-link" %></li>
+    </ul>
+  </div>
+</div>
+</div>

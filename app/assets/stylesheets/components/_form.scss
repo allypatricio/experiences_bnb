@@ -1,0 +1,36 @@
+// BUTTONS
+.form-button {
+  border-radius: 4px;
+  background-color: #86E7DF;
+  color: #2c2d33;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-button:hover {
+  border-radius: 5px;
+  background-color: #86E7DF;
+  color: #2c2d33;
+  // font-size: 19px;
+  border: 1px solid white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.row h1 {
+  color: #2c2d33;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-inputs {
+  color: #2c2d33;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+.form-card {
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  padding: 30px;
+  background-color: white;
+  margin-top: 10%;
+}
