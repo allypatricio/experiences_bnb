@@ -43,7 +43,7 @@ end
   end
 
   def experience_params
-    params.require(:experience).permit(:title, :category, :description, :duration, :address, :price)
+    params.require(:experience).permit(:title, :category, :description, :duration, :address, :price, :photo)
   end
 
 end
