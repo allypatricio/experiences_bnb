@@ -6,7 +6,7 @@
 
   <!-- Right Navigation -->
   <div class="navbar-xp-right hidden-xs hidden-sm">
-
+    <p> <%=link_to "Bookings", bookings_path, :class => "navbar-xp-link-welcome" %></p>
     <p  class="navbar-xp-item navbar-xp-link-welcome">Welcome</p>
     <% if current_user.first_name == nil %>
     <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.email %></p>
