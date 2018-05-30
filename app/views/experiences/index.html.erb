@@ -1,5 +1,8 @@
 <% if user_signed_in? == false %>
-<%= render "shared/banner" %>
+  <%= render "shared/banner" %>
+<%else%>
+  <div class="margin-banner">
+</div>
 <%end%>
 <div id="experiences"> </div>
   <div class="row">
