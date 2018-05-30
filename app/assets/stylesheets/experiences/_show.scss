@@ -1,19 +1,59 @@
-
-#banner {
-  height: 250px;
-  background-color: #CED3DC;
-  width:100%;
-  margin-top: 10px;
+.experience-wrapper {
+  height: calc(100vh - 70px);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.experience-background {
+  height: calc(100vh - 70px);
+  width: 100vw;
+  position: fixed;
+  top: 70px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+.experience-container {
+  // background-color: white;
+  z-index: 2;
+  padding: 0px;
+}
+
+// #banner {
+//   border: solid 2px black;
+//   height: 250px;
+//   background-color: #CED3DC;
+//   width:100%;
+//   margin-top: 10px;
+// }
+
 .experience-top-section {
+  // border: solid 2px black;
+  background-color: white;
   position: relative;
   height : 200px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 23px 0 rgba(185, 189, 200, 0.3);
+  h1 {
+    margin-top: 0px }
+}
+
+.avatar-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  right: 50px;
+  top: 30px;
 }
 
 .avatar {
-  position: absolute;
-  right: 30px;
-  top: 40px;
   height: 90px;
   width: 90px;
   border-radius: 50%;
@@ -22,21 +62,47 @@
 
 }
 .experience-bottom-section {
-  display: flex;
-  justify-content: space-around;
-  width:100%;
+  // border: solid 2px black;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 10px 23px 0 rgba(185, 189, 200, 0.3);
 }
+
+.experience-content {
+  background-color: white;
+  height: 500px;
+  position: relative;
+  padding: 30px;
+  h2 {
+    margin-top: 0px
+  }
+}
+
 .price {
   position: absolute;
-
+  bottom: 30px;
+  left: 30px;
 }
 
-#map {
-  width: 100%;
-  background-color: #CED3DC;
-  height: 500px;
-  margin-bottom: 20px;
+.btn-book-now {
+  // display: block;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: #86E7DF;
+  color: #2c2d33;
+  font-family: 'Roboto', sans-serif;
 }
+
+// #map {
+//   width: 100%;
+//   background-color: #CED3DC;
+//   height: 500px;
+//   margin-bottom: 20px;
+// }
 
 
 

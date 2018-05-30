@@ -6,6 +6,7 @@ class ExperiencesController < ApplicationController
   end
 
   def show
+    @no_container = true
     @markers = [{
       lat: @experience.latitude,
       lng: @experience.longitude

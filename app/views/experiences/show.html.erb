@@ -1,34 +1,50 @@
-<div id="banner">
-</div>
+<div class="experience-wrapper">
 
+  <div class="experience-background" style="background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0)), url(<%=@experience.photo%>);">
+  </div>
 
-<div class="experience-top-section">
+  <div class="container experience-container">
+<!-- <div id="banner" style="background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0)), url(<%=@experience.photo%>);">
+</div> -->
 
- <h1><%= @experience.title %></h1>
- <ul class="list-unstyled">
-  <li>Categoty: <%= @experience.category %></li>
-  <li>Time: <%= @experience.duration %></li>
-</ul>
-<div class="avatar"></div>
-</div>
-
-<div class="experience-bottom-section" >
-  <!-- <div class="row"> -->
-    <div class="col-xs-12 col-md-6">
-      <%= @experience.description %>
-      <div class="price">Price €
-        <%= @experience.price %></div>
+    <div class="experience-top-section">
+      <h1><strong><%= @experience.title.capitalize %></strong></h1>
+      <ul class="list-unstyled">
+        <li><strong>Category:</strong> <%= @experience.category.capitalize %></li>
+        <li><strong>Duration:</strong> <%= @experience.duration %> hours</li>
+      </ul>
+      <div class="avatar-box text-center">
+        <div class="avatar" style="background-image: url(<%= @experience.user.photo %>"> </div>
+        <p>Hosted by <br> <%= @experience.user.first_name %> Longname </p>
       </div>
+    </div>
 
-      <div class="col-xs-12 col-md-6">
-        <div
+    <div class="experience-bottom-section" >
+      <div class="row no-gutters">
+
+        <div class="col-xs-12 col-md-7">
+          <div class="experience-content">
+            <h2><strong>Description</strong></h2>
+            <%= @experience.description.capitalize %>
+            <div class="price">
+              <strong>Price:</strong> € <%=@experience.price.round(2) %>
+            </div>
+            <div class="btn-book-now text-center">
+              <%=link_to "Book now", new_experience_booking_path(@experience), class: "form-button" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-5">
+          <div
           id="map"
           style="width: 100%;
-          height: 600px;"
+          height: 500px;"
           data-markers="<%= @markers.to_json %>"
-        ></div>
+          ></div>
+        </div>
+
       </div>
     </div>
   </div>
-
-  <%link_to "book me", new_experience_booking_path(Experience.first) %>
+</div>
