@@ -5,7 +5,7 @@
   flex: 1 1 auto;
   margin: 10px;
   border-radius: 1px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
 }
 // .card:hover {
@@ -64,11 +64,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: #86E7DF;
+  background-color: white;
   opacity: 0.8;
 }
 .card-footer p {
-  color: white;
+  color:  #86E7DF;
   padding-top: 5px;
   font-weight: lighter;
   font-size: 12px;
@@ -97,4 +97,8 @@
 }
 .avatar-large {
   width: 40px;
+}
+
+body {
+  background-color: white;
 }
