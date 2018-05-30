@@ -29,9 +29,7 @@
             <div class="price">
               <strong>Price:</strong> € <%=@experience.price.round(2) %>
             </div>
-            <div class="btn-book-now text-center">
-              <%=link_to "Book now", new_experience_booking_path(@experience), class: "form-button" %>
-            </div>
+              <%=link_to "Book now", new_experience_booking_path(@experience), class: "btn-book-now text-center" %>
           </div>
         </div>
 
