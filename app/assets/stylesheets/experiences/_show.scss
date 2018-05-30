@@ -1,0 +1,43 @@
+
+#banner {
+  height: 250px;
+  background-color: #CED3DC;
+  width:100%;
+  margin-top: 10px;
+}
+.experience-top-section {
+  position: relative;
+  height : 200px;
+}
+
+.avatar {
+  position: absolute;
+  right: 30px;
+  top: 40px;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 1px solid #86E7DF;
+  background-color: #CED3DC;
+
+}
+.experience-bottom-section {
+  display: flex;
+  justify-content: space-around;
+  width:100%;
+}
+.price {
+  position: absolute;
+
+}
+
+#map {
+  width: 100%;
+  background-color: #CED3DC;
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+
+
+

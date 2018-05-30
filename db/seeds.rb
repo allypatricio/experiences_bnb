@@ -4,6 +4,7 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Creating users
@@ -67,3 +68,4 @@ p "Created 20 experiences. Users 1-4 are hosts and have experiences assigned to 
 end
 
 p "Created 40 bookings. Bookings are randomly assigned to all users (which means that a host may have booked his own experience)"
+

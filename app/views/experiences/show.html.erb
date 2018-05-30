@@ -1,9 +1,34 @@
-show
-<%= link_to "book me", new_experience_booking_path(Experience.first) %>
+<div id="banner">
+</div>
 
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-></div>
+
+<div class="experience-top-section">
+
+ <h1><%= @experience.title %></h1>
+ <ul class="list-unstyled">
+  <li>Categoty: <%= @experience.category %></li>
+  <li>Time: <%= @experience.duration %></li>
+</ul>
+<div class="avatar"></div>
+</div>
+
+<div class="experience-bottom-section" >
+  <!-- <div class="row"> -->
+    <div class="col-xs-12 col-md-6">
+      <%= @experience.description %>
+      <div class="price">Price €
+        <%= @experience.price %></div>
+      </div>
+
+      <div class="col-xs-12 col-md-6">
+        <div
+          id="map"
+          style="width: 100%;
+          height: 600px;"
+          data-markers="<%= @markers.to_json %>"
+        ></div>
+      </div>
+    </div>
+  </div>
+
+  <%link_to "book me", new_experience_booking_path(Experience.first) %>

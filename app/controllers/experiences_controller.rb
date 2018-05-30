@@ -11,7 +11,6 @@ class ExperiencesController < ApplicationController
       lat: @experience.latitude,
       lng: @experience.longitude
     }]
-    # raise
   end
 
   def new
