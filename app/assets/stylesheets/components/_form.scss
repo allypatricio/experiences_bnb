@@ -1,4 +1,30 @@
 // BUTTONS
+.form-wrapper {
+  height: calc(100vh - 70px);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-background {
+  background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.1)),image-url("lisbon-2.jpeg");
+  filter: blur(1.25px);
+  background-size: cover;
+  opacity: 5px;
+  height: calc(100vh - 70px);
+  top: 70px;
+  width: 100%;
+  margin: 0px;
+  z-index: -1;
+  position: fixed;
+}
+
+.form-container {
+  z-index: 2;
+  padding: 2em;
+}
+
 .form-button {
   border-radius: 4px;
   background-color: #86E7DF;
@@ -14,11 +40,6 @@
   border: 1px solid white;
 }
 
-.row h1 {
-  color: #2c2d33;
-  text-align: center;
-}
-
 .form-inputs {
   color: #2c2d33;
   font-size: 18px;
@@ -29,16 +50,12 @@
   padding: 30px;
   background-color: white;
   margin-top: 10%;
-  border-radius: 3px
+  border-radius: 3px;
+  h1 {
+     color: #2c2d33;
+  text-align: center;
+  }
 }
 
 
-.form-container {
-  background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.1)),image-url("lisbon-2.jpeg");
-  background-size: cover;
-  opacity: 5px;
-  height: 100vh;
-  width: 100%;
-  margin: 0px;
-}
 
