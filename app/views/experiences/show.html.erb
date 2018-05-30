@@ -29,13 +29,13 @@
             <%= @experience.description.capitalize %>
             </div>
             <div class="price">
-              <strong>Price:</strong> € <%=@experience.price.round(2) %>
+              <strong>Price:</strong> € <%=@experience.price.to_i %>
             </div>
               <%=link_to "Book now", new_experience_booking_path(@experience), class: "btn-book-now text-center" %>
           </div>
 
 
-          <div id="map" style="width: 100%; height: 50vh;" data-markers="<%= @markers.to_json %>"></div>
+          <div id="map" style="width:30vw; height: 50vh;" data-markers="<%= @markers.to_json %>"></div>
 
       </div>
       </div>
