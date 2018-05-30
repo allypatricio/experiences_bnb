@@ -2,6 +2,7 @@ class BookingsController < ApplicationController
 
 
   def index
+    @no_container = true
     @experiences = Experience.all
     bookings = Booking.all
     @bookings_user = []
