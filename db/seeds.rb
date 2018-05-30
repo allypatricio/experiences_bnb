@@ -36,7 +36,11 @@ p "Created 5 users: test@test.com and 4 random e-mail addresses. All users have 
 # Create experiences
 
 ADDRESSES = ["Cais do Sodre, Lisbon, Portugal", "Cascais, Portugal", "Sintra, Portugal", "Porto, Portugal", "Sagres, Portugal", "Faro, Portugal", "Serra d'Estrella, Portugal", "Costa da Caparica, Portugal", "Setubal, Portugal", "Carcavelos, Portugal"]
-CATEGORIES = ["Sports", "Food", "Culture", "Music", "Sightseeing"]
+PHOTO_URLS = [
+  "http://dqndusk8a84ol.cloudfront.net/image/53ad79112b255e943e1e2a842d685952.jpg?&x=1500&y=460&cx=0&cy=41&cw=3000&ch=919&icq=74&sig=388af7b42cab78324ee328ab7943a38e",
+  "https://assets.entrepreneur.com/content/3x2/1300/20150608231057-surfing-water-waves.jpeg",
+  "http://tamarazidar.com/wp-content/uploads/2015/09/TamaraZidar_RawFoodWorkshop8-940x627.jpg",
+  "http://www.insidelisbon.com/wp-content/uploads/2017/08/IMG-20170727-WA0004_1300_2.jpg"]
 
 20.times do
   experience = Experience.new({
@@ -45,9 +49,10 @@ CATEGORIES = ["Sports", "Food", "Culture", "Music", "Sightseeing"]
     description: Faker::Lorem.words(rand(10..60)).join(" "),
     price: rand(5..30),
     duration: rand(1..5),
-    category: CATEGORIES.sample,
+    category: Experience::CATEGORIES.sample,
     user_id: rand(1..4)
     })
+  experience.remote_photo_url = PHOTO_URLS.sample
   experience.save
 end
 
