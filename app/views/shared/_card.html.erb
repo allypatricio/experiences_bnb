@@ -12,7 +12,7 @@
         <%end%>
       <%=link_to "", experience_path(experience), :class => "card-link" %>
       <div class="card-footer">
-    <p><%=experience.address%> (<%=experience.price%>€)</p>
+    <p><%=experience.address%> (<%=experience.price.to_i%>€)</p>
     <div class="controls">
       <a href="#"><i class="fa fa-star"></i></a>
       <a href="#"><i class="fa fa-share"></i></a>
