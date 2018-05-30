@@ -3,7 +3,6 @@ class ExperiencesController < ApplicationController
 
   def index
     @experiences = Experience.all
-
   end
 
   def show
@@ -40,9 +39,6 @@ class ExperiencesController < ApplicationController
   end
 
   private
-  def article_params
-  params.require(:experience).permit(:photo)
-end
 
   def set_experience
     @experience = Experience.find(params[:id])
