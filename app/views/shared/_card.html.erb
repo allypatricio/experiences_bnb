@@ -6,13 +6,13 @@
         <p>duration: <%=experience.duration%>h</p>
       </div>
        <% if experience.user.photo.url == nil %>
-          <i class="far fa-user card-user avatar avatar-large"></i>
+          <i class="far fa-user card-user avatar-border-white-i"></i>
           <% else %>
-          <%= image_tag experience.user.photo.url(:thumnail), :class => "far fa-user card-user avatar avatar-large"%>
+          <%= image_tag experience.user.photo.url(:thumnail), :class => "far fa-user card-user avatar-small avatar-border-white"%>
         <%end%>
       <%=link_to "", experience_path(experience), :class => "card-link" %>
       <div class="card-footer">
-    <p><%=experience.price%>€ in <%=experience.address%></p>
+    <p><%=experience.address%> (<%=experience.price%>€)</p>
     <div class="controls">
       <a href="#"><i class="fa fa-star"></i></a>
       <a href="#"><i class="fa fa-share"></i></a>

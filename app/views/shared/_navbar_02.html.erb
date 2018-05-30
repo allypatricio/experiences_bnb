@@ -19,12 +19,12 @@
       <div class="dropdown">
         <% if User.instance_methods.include? :photo %>
         <% if current_user.photo.url == nil %>
-        <i class="far fa-user dropdown-toggle" id="navbar-xp-menu" data-toggle="dropdown"></i>
+        <i class="far fa-user dropdown-toggle avatar-border-turqoise-i " id="navbar-xp-menu" data-toggle="dropdown"></i>
         <% else %>
-        <%= image_tag current_user.photo.url(:thumnail), :class => "avatar dropdown-toggle", :id => "navbar-xp-menu",data: { toggle: 'dropdown' }%>
+        <%= image_tag current_user.photo.url(:thumnail), :class => "avatar dropdown-toggle avatar-border-turqois", :id => "navbar-xp-menu",data: { toggle: 'dropdown' }%>
         <%end%>
         <%else%>
-        <i class="far fa-user dropdown-toggle" id="navbar-xp-menu" data-toggle="dropdown"></i>
+        <i class="far fa-user dropdown-toggle avatar-border-turqoise-i " id="navbar-xp-menu" data-toggle="dropdown"></i>
         <%end%>
 
         <ul class="dropdown-menu dropdown-menu-right navbar-xp-dropdown-menu">

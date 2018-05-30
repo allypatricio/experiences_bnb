@@ -7,14 +7,34 @@
 .avatar-large {
   height: 90px;
   width: 90px;
+  border-radius: 50%;
 }
 
 .avatar-small {
   height: 40px;
   width: 40px;
-  border: 1px solid white;
+  border-radius: 50%;
 }
 
 .avatar-border-turqoise {
   border: 1px solid #86E7DF;
 }
+
+.avatar-border-white {
+  border: 1px solid white;
+}
+
+.avatar-border-turqoise-i {
+  border: 1px solid #86E7DF;
+  display: inline-block;
+  border-radius: 60px;
+  padding: 0.5em 0.6em;
+}
+
+.avatar-border-white-i {
+  border: 1px solid white;
+  display: inline-block;
+  border-radius: 60px;
+  padding: 0.5em 0.6em;
+}
+
