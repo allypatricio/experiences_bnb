@@ -4,18 +4,20 @@
 .card {
   flex: 1 1 auto;
   margin: 10px;
-  border-radius: 1px;
-  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
+  border-radius: 3px;
+
 }
 // .card:hover {
 //   margin-top: -5px;
 // }
 .card-body {
-  height: 180px;
+  height: 260px;
   background-size: cover;
   color: white;
   position: relative;
+  border-radius: 3px;
 }
 .card-user {
   position: absolute;
@@ -41,11 +43,15 @@
   font-size: 20px;
   margin-bottom: 0px;
   font-weight: bold;
+  position: absolute;
+  bottom: 120px;
 }
 .card-description p {
   font-size: 14px;
   font-weight: lighter;
   opacity: 0.9;
+  position: absolute;
+  bottom: 60px;
 }
 .card-link {
   position: absolute;
@@ -55,6 +61,8 @@
   z-index:2;
   background: black;
   opacity: 0;
+  border-radius: 3px;
+
 }
 .card-link:hover{
   opacity: 0.1;
@@ -65,16 +73,20 @@
   justify-content: space-between;
   padding: 10px;
   background-color: white;
-  opacity: 0.8;
+  opacity: 0.9;
   min-height: 80px;
-
+  position:absolute;
+  bottom:0;
+  width:100%;
+  // border-top: 3px solid #86E7DF;
 }
 .card-footer p {
-  color:  #86E7DF;
+  color: #86E7DF;
   padding-top: 5px;
   font-weight: lighter;
-  font-size: 12px;
+  font-size: 15px;
   width: 50%;
+  opacity: 1;
 }
 .card-footer .controls{
   display: flex;
@@ -83,10 +95,10 @@
 .card-footer .controls i{
   padding: 0 10px;
   color: black;
-  opacity: 0.2;
+  opacity: 0.4;
 }
 .card-footer .controls i:hover{
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 .avatar {
@@ -99,8 +111,4 @@
 }
 .avatar-large {
   width: 40px;
-}
-
-body {
-  background-color: white;
 }

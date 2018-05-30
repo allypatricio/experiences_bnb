@@ -11,12 +11,13 @@
           <%= image_tag experience.user.photo.url(:thumnail), :class => "far fa-user card-user avatar avatar-large"%>
         <%end%>
       <%=link_to "", experience_path(experience), :class => "card-link" %>
-  </div>
-  <div class="card-footer">
+      <div class="card-footer">
     <p><%=experience.price%>€ in <%=experience.address%></p>
     <div class="controls">
       <a href="#"><i class="fa fa-star"></i></a>
       <a href="#"><i class="fa fa-share"></i></a>
     </div>
   </div>
+  </div>
+
 </div>
