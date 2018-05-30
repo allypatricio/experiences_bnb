@@ -3,6 +3,7 @@ class ExperiencesController < ApplicationController
 
   def index
     @experiences = Experience.all
+    @no_container = true
   end
 
   def show
