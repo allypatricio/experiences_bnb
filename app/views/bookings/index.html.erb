@@ -1,0 +1,19 @@
+<h3>Bookings (I'm a guest)</h3>
+<ul class="list-unstyled">
+<% @bookings_user.each do |booking| %>
+<li>
+  <p>Experience ID:<%= @experiences.find(booking.experience_id).id %></p>
+  <p>Status:<%= booking.status%></p>
+</li>
+<%end%>
+</ul>
+
+<h3>Bookings (I'm a host)</h3>
+<ul class="list-unstyled">
+<% @bookings_host.each do |booking| %>
+<li>
+  <p>Experience ID:<%= @experiences.find(booking.experience_id).id %></p>
+  <p>Status:<%= booking.status%></p>
+</li>
+<%end%>
+</ul>

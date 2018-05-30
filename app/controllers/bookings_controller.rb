@@ -1,4 +1,24 @@
 class BookingsController < ApplicationController
+
+
+  def index
+    @experiences = Experience.all
+    bookings = Booking.all
+    @bookings_user = []
+    bookings.each do |booking|
+       if booking.user_id  == current_user.id
+        @bookings_user << booking
+      end
+    end
+
+    @bookings_host = []
+    bookings.each do |booking|
+      if Experience.find(booking.experience_id).user_id == current_user.id
+      @bookings_host << booking
+      end
+    end
+
+  end
   def new
     @experience = Experience.find(params[:experience_id])
     @host = User.find(@experience.user_id)
