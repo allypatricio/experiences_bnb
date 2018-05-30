@@ -35,24 +35,44 @@
   opacity: 0.9;
 }
 .card-description {
-  position: absolute;
+  // position: relative;
   bottom: 10px;
   left: 10px;
 }
+
 .card-description h2 {
-  font-size: 20px;
   margin-bottom: 0px;
   font-weight: bold;
-  position: absolute;
-  bottom: 120px;
+    position: absolute;
+    left: 0;
+    top: 18%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  // background: linear-gradient(rgba(134, 231, 223,0.8), rgba(134, 231, 223,0.4));
+  // background: linear-gradient(rgba(255, 255, 255,0.8), rgba(255, 255, 255,0.4));
+  // padding: 5px;
+  // border-radius: 5px;
+  color: white;
+  font-size: 50px;
+  opacity: 0.8;
 }
-.card-description p {
-  font-size: 14px;
+.card-time p {
+  font-size: 12px;
   font-weight: lighter;
   opacity: 0.9;
   position: absolute;
-  bottom: 60px;
+  top: 35px;
+  left: 10px;
+// background: linear-gradient(rgba(121, 224, 181,0.8), rgba(121, 224, 181,0.4));
+  // background: linear-gradient(rgba(255, 255, 255,0.8), rgba(255, 255, 255,0.4));
+  // padding: 5px;
+    // border-radius: 5px;
+      color: white;
+
+
 }
+
 .card-link {
   position: absolute;
   top: 0;
@@ -78,10 +98,10 @@
   position:absolute;
   bottom:0;
   width:100%;
-  // border-top: 3px solid #86E7DF;
+  border-top: 1px solid #86E7DF;
 }
 .card-footer p {
-  font-size: 12px;
+  font-size: 15px;
   color: #5B5B5B;
   padding-top: 5px;
   font-weight: bold;
@@ -118,3 +138,4 @@
   padding-right: 80px;
   margin-top: 100px;
 }
+
