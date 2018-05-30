@@ -19,27 +19,20 @@
 }
 
 .experience-container {
-  // background-color: white;
   z-index: 2;
   padding: 0px;
 }
 
-// #banner {
-//   border: solid 2px black;
-//   height: 250px;
-//   background-color: #CED3DC;
-//   width:100%;
-//   margin-top: 10px;
-// }
-
 .experience-top-section {
-  // border: solid 2px black;
+
   background-color: white;
+  opacity: 0.95;
   position: relative;
   height : 200px;
   padding: 30px;
   margin-bottom: 30px;
-  box-shadow: 0 10px 23px 0 rgba(185, 189, 200, 0.3);
+  box-shadow: 0 10px 22px 0 rgba(185, 189, 200, 0.3);
+  border-radius: 2px;
   h1 {
     margin-top: 0px }
 }
@@ -59,12 +52,13 @@
   border-radius: 50%;
   border: 1px solid #86E7DF;
   background-color: #CED3DC;
-
 }
+
 .experience-bottom-section {
-  // border: solid 2px black;
   width: 100%;
   background-color: white;
+  opacity: 0.95;
+  border-radius: 2px;
   box-shadow: 0 10px 23px 0 rgba(185, 189, 200, 0.3);
 }
 
