@@ -3,10 +3,10 @@ class ExperiencesController < ApplicationController
 
   def index
     @experiences = Experience.all
-
   end
 
   def show
+    @no_container = true
     @markers = [{
       lat: @experience.latitude,
       lng: @experience.longitude
@@ -40,9 +40,6 @@ class ExperiencesController < ApplicationController
   end
 
   private
-  def article_params
-  params.require(:experience).permit(:photo)
-end
 
   def set_experience
     @experience = Experience.find(params[:id])
