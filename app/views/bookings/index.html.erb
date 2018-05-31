@@ -1,29 +1,19 @@
 <div class="booking-wrapper">
   <div class="form-background" ></div>
-  <div class="bookings">
+    <div class="bookings">
 
     <h3>Bookings (I'm a guest)</h3>
     <div class="booking-guest">
-<ul class="list-unstyled">
-<% @bookings_user.each do |booking| %>
-<li>
-  <p>Experience ID:<%= @experiences.find(booking.experience_id).id %></p>
-  <p>Status:<%= booking.status%></p>
-</li>
-<%end%>
-</ul>
-</div>
+      <% @bookings_user.each do |booking| %>
+        <%= render "shared/message" %>
+      <%end%>
+    </div>
 
-<h3>Bookings (I'm a host)</h3>
-<div class="booking-host">
-<ul class="list-unstyled">
-<% @bookings_host.each do |booking| %>
-<li>
-  <p>Experience ID:<%= @experiences.find(booking.experience_id).id %></p>
-  <p>Status:<%= booking.status%></p>
-</li>
-<%end%>
-</ul>
-</div>
-</div>
+    <h3>Bookings (I'm a host)</h3>
+    <div class="booking-host">
+    <% @bookings_host.each do |booking| %>
+      <%= render "shared/message" %>
+    <%end%>
+    </div>
+  </div>
 </div>
