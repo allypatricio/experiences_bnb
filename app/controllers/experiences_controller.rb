@@ -23,6 +23,8 @@ class ExperiencesController < ApplicationController
 
   def new
      @experience = Experience.new()
+     @no_container = true
+
   end
 
   def create
