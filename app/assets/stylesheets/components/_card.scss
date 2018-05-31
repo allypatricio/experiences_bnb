@@ -1,14 +1,14 @@
-.cards {
-  display: flex;
-}
-.card {
-  flex: 1 1 auto;
-  margin: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
-  border-radius: 3px;
+// .cards {
+//   display: flex;
+// }
+// .card {
+//   flex: 1 1 auto;
+//   margin: 10px;
+//   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+//   transition: all 0.3s ease;
+//   border-radius: 3px;
 
-}
+// }
 // .card:hover {
 //   margin-top: -5px;
 // }
@@ -18,6 +18,9 @@
   color: white;
   position: relative;
   border-radius: 3px;
+   margin: 10px;
+box-shadow: 0 0 10px rgba(0,0,0,0.3);
+transition: all 0.3s ease;
 }
 .card-user {
   position: absolute;
@@ -45,7 +48,7 @@
   font-weight: bold;
     position: absolute;
     left: 0;
-    top: 18%;
+    top: 25%;
     width: 100%;
     text-align: center;
     font-size: 18px;
@@ -58,6 +61,12 @@
   color: white;
   font-size: 50px;
   opacity: 0.8;
+  &:hover {
+  color: white;
+  font-size: 50px;
+  text-shadow: 1px 1px 1.5px;
+  opacity: 1px;
+  }
 }
 .card-time p {
   font-size: 12px;
@@ -75,33 +84,51 @@
 
 }
 
-.card-link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  z-index:2;
-  background: black;
-  opacity: 0;
-  border-radius: 3px;
+// .card-link {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   width: 100%;
+//   z-index:2;
+//   background: black;
+//   opacity: 0;
+//   border-radius: 3px;
 
-}
-.card-link:hover{
-  opacity: 0.1;
-}
+// }
+// .card-link:hover{
+//   opacity: 0.1;
+// }
 .card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  background-color: white;
-  opacity: 0.9;
-  min-height: 80px;
-  position: absolute;
-  bottom:0;
-  width:100%;
+  // padding: 10px;
+  // background-color: white;
+  opacity: 0.8;
+  // min-height: 80px;
+  // position: absolute;
+  // bottom:0;
+  // width:100%;
   border-top: 1px solid #86E7DF;
+
+  // cool shit
+    position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
 }
+
+// cool shit
+
+.card-body:hover .card-footer {
+  height: 30%;
+}
+
 
 .card-footer p {
   font-size: 15px;
@@ -109,7 +136,14 @@
   padding-top: 5px;
   font-weight: bold;
   width: 50%;
-  // opacity: 1;
+
+  // cool shit
+  position: absolute;
+  top: 50%;
+  left: 15vh;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
 .card-footer .controls{
   display: flex;
@@ -144,4 +178,19 @@
 .margin-banner{
   margin-top: 11vh;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
