@@ -16,7 +16,7 @@
       <div class="alert alert-<%= message_type %>"><%= message %></div>
     <% end %>
     <div class="<%= "container" unless @no_container %>">
-    <%= yield %>
+      <%= yield %>
     </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>

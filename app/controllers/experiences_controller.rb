@@ -1,7 +1,7 @@
 class ExperiencesController < ApplicationController
   before_action :set_experience, only: [:show, :edit, :update, :destroy]
 
-  def index 
+  def index
     @experiences = Experience.all
     @experiences = @experiences = Experience.perform_search(params[:search]) if params[:search].present?
     @experiences = @experiences.category(params[:category].downcase.capitalize) if params[:category].present?
@@ -23,6 +23,7 @@ class ExperiencesController < ApplicationController
 
   def new
      @experience = Experience.new()
+     @no_container = true
   end
 
   def create

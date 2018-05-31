@@ -1,9 +1,9 @@
 <div class="edit-form">
   <div class="form-wrapper">
-    <div class="upload-form-background"></div>
+    <div class="new-form-background"></div>
 
     <div class="form-container col-sm-5">
-      <div class="form-card">
+      <div class="new-form-card">
         <h1>Add a new experience</h1>
         <%= simple_form_for(@experience) do |f| %>
         <%= f.error_notification %>
@@ -13,7 +13,7 @@
           <%= f.input :title %>
           <%= f.input :category, :collection => Experience::CATEGORIES %>
           <%= f.input :description %>
-          <%= f.input :duration %>
+          <%= f.input :duration, as: :numeric %>
           <%= f.input :address %>
           <%= f.input :price %>
           <%= f.input :photo %>
