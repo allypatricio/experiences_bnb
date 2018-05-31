@@ -13,6 +13,7 @@
       <ul class="list-unstyled">
         <li><strong>Category:</strong> <%= @experience.category.capitalize %></li>
         <li><strong>Duration:</strong> <%= @experience.duration %> hours</li>
+        <li><strong>Price:</strong> € <%=@experience.price.to_i %></li>
       </ul>
       <div class="avatar-box text-center">
         <% if @experience.user.photo.url != nil %>
@@ -28,9 +29,11 @@
             <h2><strong>Description</strong></h2>
             <%= @experience.description.capitalize %>
             </div>
-            <div class="price">
+            <!-- <div class="price">
               <strong>Price:</strong> € <%=@experience.price.to_i %>
-            </div>
+            </div> -->
+            <%= link_to "Go Back", experiences_path, :class => "text-center back-button-pink border-radius"  %>
+
             <div class="button-book">
               <button type="button" class="btn-book-now btn-book-show-page text-center" data-toggle="modal" data-target="#bookNowModal">Book now</button>
             </div>
@@ -51,9 +54,7 @@
 
 I'm really looking forward to joining your activity! We would like to come on the selected date, do we need to bring anything?
 
-Looking forward to meet you!
-
-#{current_user.first_name.capitalize}"%>
+Looking forward to meet you!"%>
 
 
 
@@ -72,7 +73,7 @@ Looking forward to meet you!
         <%= simple_form_for([@experience, @booking]) do |f| %>
           <div class="form-inputs">
             <%= f.input :date_time, as: :string, label: "Select a date and time" %>
-            <%= f.input :message, :input_html => {:rows => 9}, label: "Add a message for #{current_user.first_name.capitalize}", placeholder: placeholder_text %>
+            <%= f.input :message, :input_html => {:rows => 9}, label: "Add a message for #{@booking.experience.user.first_name.capitalize}", placeholder: placeholder_text %>
           </div>
 
           <div class="form-actions">

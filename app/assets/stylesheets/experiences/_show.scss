@@ -114,6 +114,21 @@
 
 }
 
+.back-button-pink {
+  color: #F0869F;
+  border: solid #F0869F;
+  padding: 10px 30px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 20px;
+  left: 26px;
+ &:hover {
+  text-decoration: none;
+  color: #F0869F;
+  opacity: 0.5;
+}
+}
+
 // #experiences{
 //   padding-bottom:12vh;
 // }

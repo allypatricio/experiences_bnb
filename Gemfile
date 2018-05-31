@@ -22,6 +22,7 @@ gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 5.0.9'
 gem 'sass-rails'
 gem 'simple_form'
+gem 'simple_form_extension'
 gem 'uglifier'
 gem 'webpacker'
 
@@ -36,3 +37,5 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+gem 'redactor-rails', github: 'glyph-fr/redactor-rails'
