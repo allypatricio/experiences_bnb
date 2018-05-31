@@ -4,34 +4,36 @@
 
 
 
-  <span class="card-category"><%=experience.category%></span>
+    <span class="card-category"><%=experience.category%></span>
 
 
+    <div class="card-description">
+      <h2><%=experience.title.upcase%></h2>
+      <!--    <p>Duration:<%=experience.duration%>h</p> -->
+    </div>
 
-  <div class="card-time">
-  <p>[<%=experience.duration%>h]</p>
-  </div>
-    <%=link_to experience_path(experience) do %>
-      <div class="card-description">
-        <h2><%=experience.title.upcase%></h2>
-     <!--    <p>Duration:<%=experience.duration%>h</p> -->
+    <% if experience.user.photo.url == nil %>
+    <i class="far fa-user card-user avatar-border-white-i"></i>
+    <% else %>
+    <%= image_tag experience.user.photo.url(:thumnail), :class => "far fa-user card-user avatar-small avatar-border-white"%>
+
+
+    <% end %>
+
+    <div class="card-footer">
+      <%=link_to experience_path(experience) do %>
+      <p><%=experience.address%> (<%=experience.price.to_i%>€)</p>
+      <div class="card-time">
+        <p>[<%=experience.duration%>h]</p>
       </div>
 
-       <% if experience.user.photo.url == nil %>
-          <i class="far fa-user card-user avatar-border-white-i"></i>
-          <% else %>
-          <%= image_tag experience.user.photo.url(:thumnail), :class => "far fa-user card-user avatar-small avatar-border-white"%>
-        <%end%>
-
-      <% end %>
-
-      <div class="card-footer">
-    <p><%=experience.address%> (<%=experience.price.to_i%>€)</p>
-    <div class="controls">
-      <a href="#"><i class="fa fa-star"></i></a>
-      <a href="#"><i class="fa fa-share"></i></a>
+      <div class="controls">
+        <a href="#"><i class="fa fa-star"></i></a>
+        <a href="#"><i class="fa fa-share"></i></a>
+      </div>
+      <%end%>
     </div>
-  </div>
+
   </div>
 </div>
 <%end%>
