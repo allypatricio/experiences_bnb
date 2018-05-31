@@ -6,7 +6,8 @@ gem 'cloudinary'
 gem 'carrierwave'
 gem 'devise'
 gem 'faker'
-gem "geocoder"
+gem 'geocoder'
+gem 'pg_search'
 
 gem 'bootsnap', require: false
 gem 'figaro'
