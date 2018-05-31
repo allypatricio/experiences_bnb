@@ -91,25 +91,23 @@
   bottom: 30px;
   left: 30px;
 }
-.book-now-link{
-  position: absolute;
-  bottom: 30px;
-}
 
 .btn-book-now {
-  // display: block;
-  position: absolute;
-  bottom: 20px;
-  left: 24vw;
   padding: 10px 20px;
   border-radius: 4px;
   background-color: #F0869F;
   color: #2c2d33;
-  font-family: 'Roboto', sans-serif;
+  // font-family: 'Roboto', sans-serif;
   &:hover {
     text-decoration: none;
     color: white;
   }
+}
+
+.btn-book-show-page {
+  position: absolute;
+  bottom: 20px;
+  left: 26vw;
 }
 
 // #experiences{
