@@ -6,48 +6,54 @@
 
   <!-- Right Navigation -->
   <div class="navbar-xp-right hidden-xs hidden-sm">
-    <p  class="navbar-xp-item navbar-xp-link-welcome">Welcome</p>
-    <% if current_user.first_name == nil %>
-    <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.email %></p>
-    <% else %>
-    <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.first_name %></p>
-    <% end %>
+    <%= form_tag "#experiences", method: :get do %>
+    <%= text_field_tag :search,
+    params[:search],
+    class: "form-control",
+      placeholder: "Search an activity"%>
+      <% end %>
+      <p  class="navbar-xp-item navbar-xp-link-welcome">Welcome</p>
+      <% if current_user.first_name == nil %>
+      <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.email %></p>
+      <% else %>
+      <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.first_name %></p>
+      <% end %>
 
-    <!-- Profile picture with dropdown list -->
-    <div class="navbar-xp-item">
-      <div class="dropdown">
-        <% if User.instance_methods.include? :photo %>
-        <% if current_user.photo.url == nil %>
-        <i class="far fa-user dropdown-toggle avatar-border-turqoise-i " id="navbar-xp-menu" data-toggle="dropdown"></i>
-        <% else %>
-        <%= image_tag current_user.photo.url(:thumnail), :class => "avatar dropdown-toggle avatar-border-turqois", :id => "navbar-xp-menu",data: { toggle: 'dropdown' }%>
-        <%end%>
-        <%else%>
-        <i class="far fa-user dropdown-toggle avatar-border-turqoise-i " id="navbar-xp-menu" data-toggle="dropdown"></i>
-        <%end%>
+      <!-- Profile picture with dropdown list -->
+      <div class="navbar-xp-item">
+        <div class="dropdown">
+          <% if User.instance_methods.include? :photo %>
+          <% if current_user.photo.url == nil %>
+          <i class="far fa-user dropdown-toggle avatar-border-turqoise-i " id="navbar-xp-menu" data-toggle="dropdown"></i>
+          <% else %>
+          <%= image_tag current_user.photo.url(:thumnail), :class => "avatar dropdown-toggle avatar-border-turqois", :id => "navbar-xp-menu",data: { toggle: 'dropdown' }%>
+          <%end%>
+          <%else%>
+          <i class="far fa-user dropdown-toggle avatar-border-turqoise-i " id="navbar-xp-menu" data-toggle="dropdown"></i>
+          <%end%>
 
         <ul class="dropdown-menu dropdown-menu-right navbar-xp-dropdown-menu">
-          <li><%=link_to "My bookings", bookings_path, :class => "navbar-xp-link-welcome" %></li>
+          <li><%=link_to "My bookings", bookings_path %></li>
+          <li><%=link_to "Create Experience", new_experience_path %></li>
           <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
           <!-- <li><a href="#">Dashboard</a></li> -->
           <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
         </ul>
       </div>
     </div>
-  </div>
 
-  <!-- Dropdown appearing on mobile only -->
-  <div class="navbar-xp-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-xp-dropdown-menu">
-        <li><p>Welcome</p></li>
-        <li>  <% if current_user.first_name == nil %>
-          <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.email %></p>
-          <% else %>
-          <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.first_name %></p>
-          <% end %></li>
-        </ul>
+    <!-- Dropdown appearing on mobile only -->
+    <div class="navbar-xp-item hidden-md hidden-lg">
+      <div class="dropdown">
+        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+        <ul class="dropdown-menu dropdown-menu-right navbar-xp-dropdown-menu">
+          <li><p>Welcome</p></li>
+          <li>  <% if current_user.first_name == nil %>
+            <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.email %></p>
+            <% else %>
+            <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.first_name %></p>
+            <% end %></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </div>
+
