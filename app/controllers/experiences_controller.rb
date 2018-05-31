@@ -3,6 +3,9 @@ class ExperiencesController < ApplicationController
 
   def index
     @experiences = Experience.all
+    @experiences = @experiences.category(params[:category].downcase.capitalize) if params[:category].present?
+    @experiences = @experiences.duration(params[:duration].downcase.capitalize) if params[:duration].present?
+    @experiences = @experiences.price(params[:price].downcase.capitalize) if params[:price].present?
     @no_container = true
   end
 
