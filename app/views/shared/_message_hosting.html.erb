@@ -1,0 +1,24 @@
+<div class="message">
+  <%  if User.find(booking.user_id).photo.url != nil %>
+  <%= image_tag User.find(booking.user_id).photo.url(:thumnail), :class => "avatar avatar-border-turqoise" %>
+  <% else %>
+  <i class="far fa-user avatar-border-turqoise-i" style="font-size: 24px"></i>
+  <% end %>
+  <div class="message-name">
+    <h3> Booked by: <%= User.find(booking.user_id).first_name%></h3>
+    <p> <%=booking.date_time.strftime("%b %e, %l:%M %p")%></p>
+  </div>
+  <div class="message-body">
+    <p><strong><%=@experiences.find(booking.experience_id).title%></strong></p>
+    <p>
+      <%=booking.message%>
+    </p>
+  </div>
+  <div class="message-status">
+    <p class="status accepted">Booked</p>
+    <p class="message-price"><%=@experiences.find(booking.experience_id).price.to_i%>€</p>
+    <%= link_to experience_booking_path(@experiences.find(booking.experience_id), booking), :method => "delete", :class => "message-link" do %>
+    <i class="far fa-trash-alt"></i>
+    <%end%>
+  </div>
+</div>
