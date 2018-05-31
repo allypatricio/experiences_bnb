@@ -4,16 +4,6 @@
   <div class="margin-banner">
 </div>
 <%end%>
-
-<div class="text-center">
-  <form action="/experiences" method="get">
-    <input type="text" id="category" name="category" placeholder="Category">
-    <input type="text" id="duration" name="duration" placeholder="duration">
-    <input type="text" id="price" name="price" placeholder="price">
-    <input type="submit">
-  </form>
-</div>
-
 <div id="experiences"> </div>
   <div class="row">
     <div class="card-container no-gutters">
@@ -21,5 +11,4 @@
         <%= group_cards_experiences(group) %>
     <%end%>
   </div>
-</div>
-
+  </div>
