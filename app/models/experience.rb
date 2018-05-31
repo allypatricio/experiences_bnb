@@ -10,8 +10,8 @@ class Experience < ApplicationRecord
     }
 
   scope :category, -> (category) { where category: category }
-  scope :duration, -> (duration) { where duration: duration }
-  scope :price,    -> (price)    { where price: price }
+  scope :duration, -> (duration) { where("duration > ? AND duration < ?", duration.split(",").first, duration.split(",").last) }
+  scope :price,    -> (price)    { where("price > ? AND price < ?", price.split(",").first, price.split(",").last) }
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
