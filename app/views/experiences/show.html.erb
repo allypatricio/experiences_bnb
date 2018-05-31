@@ -13,6 +13,7 @@
       <ul class="list-unstyled">
         <li><strong>Category:</strong> <%= @experience.category.capitalize %></li>
         <li><strong>Duration:</strong> <%= @experience.duration %> hours</li>
+        <li><strong>Price:</strong> € <%=@experience.price.to_i %></li>
       </ul>
       <div class="avatar-box text-center">
         <% if @experience.user.photo.url != nil %>
@@ -28,9 +29,11 @@
             <h2><strong>Description</strong></h2>
             <%= @experience.description.capitalize %>
             </div>
-            <div class="price">
+            <!-- <div class="price">
               <strong>Price:</strong> € <%=@experience.price.to_i %>
-            </div>
+            </div> -->
+            <%= link_to "Go Back", experiences_path, :class => "text-center back-button-pink border-radius"  %>
+
             <div class="button-book">
               <button type="button" class="btn-book-now btn-book-show-page text-center" data-toggle="modal" data-target="#bookNowModal">Book now</button>
             </div>
