@@ -11,10 +11,17 @@
     <input type="text" id="category" name="category" placeholder="Category">
 
     <label for="category">Duration</label>
-    <input type="text" id="duration" name="duration" class="span2" value="" data-slider-min="0" data-slider-max="6" data-slider-step="0.5" data-slider-value="[0.5,5.5]"/>
+    <input type="text" id="duration" name="duration" class="span2" value="" data-slider-step="0.5" data-slider-min="0" data-slider-max="6"
+
+    data-slider-value="[<%= params[:duration].nil? || params[:duration].empty? ? 0.5 : params[:duration].split(",").first%>,
+    <%= params[:duration].nil? || params[:duration].empty? ? 25 : params[:duration].split(",").last %>]"/>
 
     <label for="category">Price</label>
-    <input type="text" id="price" name="price" class="span2" value="" data-slider-min="5" data-slider-max="40" data-slider-step="1" data-slider-value="[5,35]"/>
+    <input type="text" id="price" name="price" class="span2" value="" data-slider-step="1" data-slider-min="5"
+     data-slider-max= "40"
+
+     data-slider-value="[<%= params[:price].nil? || params[:price].empty? ? 15 : params[:price].split(",").first%>,
+     <%= params[:price].nil? || params[:price].empty? ? 25 : params[:price].split(",").last %>]"/>
 
     <input type="submit">
   </form>
