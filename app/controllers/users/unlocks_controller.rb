@@ -3,6 +3,7 @@
 class Users::UnlocksController < Devise::UnlocksController
   #GET /resource/unlock/new
   def new
+    @no_container = true
     super
   end
 
@@ -13,6 +14,7 @@ class Users::UnlocksController < Devise::UnlocksController
 
   #GET /resource/unlock?unlock_token=abcdef
   def show
+    @no_container = true
     super
   end
 
