@@ -9,7 +9,7 @@
   <%= form_tag "#experiences", method: :get do %>
   <%= text_field_tag :search,
     params[:search],
-    class: "form-control",
+    class: "search-form",
     placeholder: "Search an activity"%>
 <% end %>
 <%= link_to 'Sign Up', new_user_registration_path, :class => "navbar-xp-item navbar-xp-link-01" %>
