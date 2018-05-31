@@ -1,0 +1,16 @@
+
+.upload-form-background {
+  background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.1)),image-url("lisbon-3.jpeg");
+  filter: blur(1.25px);
+  background-size: 100%;
+  opacity: 5px;
+  height: calc(100vh - 70px);
+  top: 70px;
+  width: 100%;
+  margin: 0px;
+  z-index: -1;
+  position: fixed;
+}
+// .experience-form-card {
+//   justify-content: center;
+// }
