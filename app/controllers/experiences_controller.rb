@@ -16,7 +16,7 @@ class ExperiencesController < ApplicationController
   end
 
   def new
-    @experience = Experience.new()
+     @experience = Experience.new()
   end
 
   def create
