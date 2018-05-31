@@ -5,19 +5,35 @@
 </div>
 <%end%>
 
-<div class="text-center">
+<!-- TODO:
+1. Dropdown selector for category
+2. button
+3. sliders coloring
+4. labels for sliders properly aligned
+ -->
+
+<div class="filter-box">
+<div class="form-inline text-center">
   <form action="/experiences" method="get">
-    <label for="category">Category</label>
-    <input type="text" id="category" name="category" placeholder="Category">
 
-    <label for="category">Duration</label>
-    <input type="text" id="duration" name="duration" class="span2" value="" data-slider-min="0" data-slider-max="6" data-slider-step="0.5" data-slider-value="[0.5,5.5]"/>
+    <div class="form-group">
+      <label for="category">Category</label>
+      <input class="filter-category" type="text" id="category" name="category" placeholder="Category">
+    </div>
 
-    <label for="category">Price</label>
-    <input type="text" id="price" name="price" class="span2" value="" data-slider-min="5" data-slider-max="40" data-slider-step="1" data-slider-value="[5,35]"/>
+    <div class="form-group">
+      <label for="category">Duration</label>
+      <input type="text" id="duration" name="duration" class="span2" value="" data-slider-min="0" data-slider-max="6" data-slider-step="0.5" data-slider-value="[0.5,5.5]"/>
+    </div>
 
-    <input type="submit">
+    <div class="form-group">
+      <label for="category">Price</label>
+      <input type="text" id="price" name="price" class="span2" value="" data-slider-min="5" data-slider-max="40" data-slider-step="1" data-slider-value="[5,35]"/>
+    </div>
+
+    <input type="submit" value="Apply filters" class="btn-book-now">
   </form>
+</div>
 </div>
 
 
