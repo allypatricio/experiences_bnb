@@ -12,11 +12,12 @@ class ExperiencesController < ApplicationController
       lat: @experience.latitude,
       lng: @experience.longitude
     }]
+    @booking = Booking.new(experience_id: params[:id])
   end
 
-  def new
-    @experience = Experience.new()
-  end
+  # def new
+  #   @experience = Experience.new()
+  # end
 
   def create
     @experience = Experience.new(experience_params)
