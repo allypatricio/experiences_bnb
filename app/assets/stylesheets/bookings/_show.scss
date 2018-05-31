@@ -1,0 +1,32 @@
+.booking-wrapper{
+  margin-top: 16vh;
+  h3{
+    font-size: 32px;
+    color: white;
+  }
+}
+
+.bookings {
+  text-align: center;
+  margin: auto;
+  width: 60%;
+}
+
+.booking-guest{
+  text-align: left;
+  overflow:auto;
+  height: 30vh;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+}
+
+.booking-host{
+  overflow:auto;
+  text-align: left;
+  height: 30vh;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}

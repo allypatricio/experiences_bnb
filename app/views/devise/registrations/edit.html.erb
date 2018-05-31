@@ -1,4 +1,5 @@
 
+<div class="edit-form">
 <div class="form-wrapper">
   <div class="form-background" ></div>
 
@@ -11,6 +12,8 @@
 
         <div class="form-inputs">
           <%= f.input :email, required: true, autofocus: true %>
+          <%= f.input :first_name %>
+          <%= f.input :last_name %>
 
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
@@ -30,5 +33,6 @@
         <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
       </div>
     </div>
+  </div>
   </div>
 
