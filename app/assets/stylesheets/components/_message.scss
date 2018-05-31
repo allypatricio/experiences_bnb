@@ -84,5 +84,11 @@
         text-decoration: none;
         color: black !important;
     }
-
+.message-link{
+  color: black;
+  &:hover {
+    opacity: 0.6;
+    color: black;
+}
+}
 

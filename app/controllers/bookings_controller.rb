@@ -34,6 +34,8 @@ class BookingsController < ApplicationController
     respond_to do |format|
       if @booking.save
         format.html { redirect_to @experience, notice: 'Your booking is confirmed!' }
+      elsif !user_signed_in?
+        format.html { redirect_to new_user_session_path, notice: 'Please sign in to make a booking' }
       else
         format.html { render :new }
       end
@@ -41,6 +43,9 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+    booking = Booking.find(params[:id])
+    booking.destroy
+    redirect_to request.referrer
   end
 
   private

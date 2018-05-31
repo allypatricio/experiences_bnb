@@ -1,9 +1,9 @@
 import "bootstrap";
-import './application.css'
+import './application.css';
+
+import Slider from '../components/bootstrap-slider.js';
+
 import initDatepickers from '../components/datepicker';
-
-//= require simple_form_extension
-
 initDatepickers();
 
 

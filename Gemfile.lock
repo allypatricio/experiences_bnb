@@ -195,15 +195,9 @@ GEM
       bundler
       ffi (~> 1.9.6)
       sass (>= 3.3.0)
-    selectize-rails (0.12.4.1)
     simple_form (4.0.1)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
-    simple_form_extension (1.4.10)
-      rails (>= 3.1)
-      redactor-rails
-      selectize-rails
-      simple_form
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -267,7 +261,6 @@ DEPENDENCIES
   redis
   sass-rails
   simple_form
-  simple_form_extension
   spring
   spring-watcher-listen (~> 2.0.0)
   uglifier
