@@ -5,6 +5,12 @@
 </div>
 <%end%>
 
+<%= simple_form_for Experience.new do |f| %>
+  <%= f.input :category %>
+  <%= f.input :duration %>
+  <%= f.input :price %>
+<% end %>
+
 <div class="text-center">
   <form action="/experiences" method="get">
     <label for="category">Category</label>
