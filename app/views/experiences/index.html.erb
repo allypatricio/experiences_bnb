@@ -5,14 +5,21 @@
 </div>
 <%end%>
 
+<%= simple_form_for Experience.new do |f| %>
+  <%= f.input :category %>
+  <%= f.input :duration %>
+  <%= f.input :price %>
+<% end %>
+
+<!--
 <div class="text-center">
-  <form action="/experiences" method="get">
+  <form action="#experiences" method="get">
     <input type="text" id="category" name="category" placeholder="Category">
-    <input type="text" id="duration" name="duration" placeholder="duration">
-    <input type="text" id="price" name="price" placeholder="price">
+    <input type="text" id="duration" name="duration" placeholder="Duration">
+    <input type="text" id="price" name="price" placeholder="Price">
     <input type="submit">
   </form>
-</div>
+</div> -->
 
 <div id="experiences"> </div>
   <div class="row">
