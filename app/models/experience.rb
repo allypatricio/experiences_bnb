@@ -3,7 +3,7 @@ class Experience < ApplicationRecord
   CATEGORIES = ["Sports", "Food", "Culture", "Music", "Sightseeing"]
 
   include PgSearch
-  pg_search_scope :search_by_title_and_description,
+  pg_search_scope :perform_search,
     against: [ :title, :description ],
     using: {
       tsearch: { prefix: true }
