@@ -35,7 +35,7 @@ p "Created 5 users: test@test.com and 4 random e-mail addresses. All users have 
 
 # Create experiences
 
-ADDRESSES = ["Cais do Sodre, Lisbon, Portugal", "Cascais, Portugal", "Sintra, Portugal", "Porto, Portugal", "Sagres, Portugal", "Faro, Portugal", "Serra d'Estrella, Portugal", "Costa da Caparica, Portugal", "Setubal, Portugal", "Carcavelos, Portugal"]
+ADDRESSES = ["Cais do Sodre, Lisbon, Portugal", "Cascais, Portugal", "Sintra, Portugal", "Porto, Portugal", "Sagres, Portugal", "Faro, Portugal", "Serra da Estrela, Portugal", "Costa da Caparica, Portugal", "Setubal, Portugal", "Carcavelos, Portugal"]
 PHOTO_URLS = [
   "http://dqndusk8a84ol.cloudfront.net/image/53ad79112b255e943e1e2a842d685952.jpg?&x=1500&y=460&cx=0&cy=41&cw=3000&ch=919&icq=74&sig=388af7b42cab78324ee328ab7943a38e",
   "https://assets.entrepreneur.com/content/3x2/1300/20150608231057-surfing-water-waves.jpeg",
