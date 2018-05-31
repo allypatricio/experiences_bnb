@@ -1,19 +1,21 @@
 <div class="booking-wrapper">
-  <div class="form-background" ></div>
     <div class="bookings">
+        <ul class="nav nav-pills">
+          <li class="active"><a data-toggle="pill" href="#guest"">Booked</a></li>
+          <li><a data-toggle="pill" href="#host" >Offering</a></li>
+        </ul>
 
-    <h3>Bookings (I'm a guest)</h3>
-    <div class="booking-guest">
-      <% @bookings_user.each do |booking| %>
-        <%= render "shared/message" %>
-      <%end%>
+        <div class="tab-content">
+          <div id="guest" class="tab-pane fade in active">
+            <% @bookings_user.each do |booking| %>
+              <%= render "shared/message" %>
+            <%end%>
+          </div>
+          <div id="host" class="tab-pane fade">
+            <% @bookings_user.each do |booking| %>
+              <%= render "shared/message" %>
+            <%end%>
+          </div>
+        </div>
     </div>
-
-    <h3>Bookings (I'm a host)</h3>
-    <div class="booking-host">
-    <% @bookings_host.each do |booking| %>
-      <%= render "shared/message" %>
-    <%end%>
-    </div>
-  </div>
 </div>
