@@ -6,12 +6,19 @@
 
   <!-- Right Navigation -->
   <div class="navbar-xp-right hidden-xs hidden-sm">
-    <%= form_tag "#experiences", method: :get do %>
-    <%= text_field_tag :search,
+     <div class="search-container">
+  <%= form_tag "#experiences", method: :get do %>
+<div class="search-components">
+  <%= label_tag :search do %>
+  <i class="fas fa-search"></i>
+<% end %>
+  <%= text_field_tag :search,
     params[:search],
     class: "search-form",
-      placeholder: "Search an activity"%>
-      <% end %>
+    placeholder: "Search for an activity"%>
+<% end %>
+</div>
+</div>
       <p  class="navbar-xp-item navbar-xp-link-welcome">Welcome</p>
       <% if current_user.first_name == nil %>
       <p class="navbar-xp-item navbar-xp-link-name"><%= current_user.email %></p>
@@ -56,4 +63,4 @@
           </ul>
         </div>
       </div>
-
+</div>
