@@ -3,6 +3,7 @@
 class Users::PasswordsController < Devise::PasswordsController
   #GET /resource/password/new
   def new
+    @no_container = true
     super
   end
 
@@ -13,6 +14,7 @@ class Users::PasswordsController < Devise::PasswordsController
 
   #GET /resource/password/edit?reset_password_token=abcdef
   def edit
+    @no_container = true
     super
   end
 
