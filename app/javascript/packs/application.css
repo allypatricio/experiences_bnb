@@ -1,5 +1,2 @@
 @import 'flatpickr/dist/flatpickr.css';
-
-/*
- *= require simple_form_extension
- */
+@import '../components/bootstrap-slider.css'

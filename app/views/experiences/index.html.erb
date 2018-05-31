@@ -5,21 +5,22 @@
 </div>
 <%end%>
 
-<%= simple_form_for Experience.new do |f| %>
-  <%= f.input :category %>
-  <%= f.input :duration %>
-  <%= f.input :price %>
-<% end %>
-
-<!--
 <div class="text-center">
-  <form action="#experiences" method="get">
+  <form action="/experiences" method="get">
+    <label for="category">Category</label>
     <input type="text" id="category" name="category" placeholder="Category">
-    <input type="text" id="duration" name="duration" placeholder="Duration">
-    <input type="text" id="price" name="price" placeholder="Price">
+
+    <label for="category">Duration</label>
+    <input type="text" id="duration" name="duration" class="span2" value="" data-slider-min="1" data-slider-max="6" data-slider-step="0.5" data-slider-value="[2,3.5]"/>
+
+    <label for="category">Price</label>
+    <input type="text" id="price" name="price" class="span2" value="" data-slider-min="5" data-slider-max="40" data-slider-step="1" data-slider-value="[15,25]"/>
+
     <input type="submit">
   </form>
-</div> -->
+</div>
+
+
 
 <div id="experiences"> </div>
   <div class="row">
@@ -30,3 +31,10 @@
   </div>
 </div>
 
+
+<% content_for :after_js do  %>
+  <script>
+  var slider = new Slider('#duration', {});
+  var slider = new Slider('#price', {});
+  </script>
+<% end %>
