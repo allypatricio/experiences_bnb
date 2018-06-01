@@ -1,0 +1,7 @@
+function renderFilteredGrid(input) {
+  const cardsGrid = document.getElementById('cardsgrid')
+  cardsGrid.innerHTML = input
+    ;
+}
+
+renderFilteredGrid('<%= j render "experiences/cardsgrid" %>');

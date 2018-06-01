@@ -5,9 +5,10 @@
 </div>
 <%end%>
 
+
 <div class="container text-center">
   <div id="filter-box">
-    <form action="#experiences" method="get">
+    <%= form_tag experiences_path, method: :get, remote: true do%>
 
       <input type="hidden" id="searchquery" name="search" value=<%= params[:search] %>>
 
@@ -41,18 +42,16 @@
       <div class="filter-box-element">
         <input type="submit" value="Apply filters" class="btn-filter">
       </div>
-    </form>
+
+    <% end %>
   </div>
 </div>
 
 
 
 <div id="experiences"> </div>
-  <div class="row">
-    <div class="card-container no-gutters">
-    <% @experiences.in_groups_of(5, Experience.new) do |group| %>
-        <%= group_cards_experiences(group) %>
-    <%end%>
+  <div class="row" id="cardsgrid">
+    <%= render 'cardsgrid' %>
   </div>
 </div>
 

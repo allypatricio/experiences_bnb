@@ -15,6 +15,11 @@ class ExperiencesController < ApplicationController
       @experiences = @experiences.duration(params[:duration]) if params[:duration].present?
       @experiences = @experiences.price(params[:price]) if params[:price].present?
     end
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def show

@@ -53,6 +53,9 @@
     color: #F0869F;
     opacity: 0.5;
   }
+  &:focus {
+    outline: none !important;
+  }
 }
 
 .no-margin {
