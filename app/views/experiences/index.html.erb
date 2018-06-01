@@ -24,7 +24,8 @@
 
       <div class="filter-box-element">
         <label for="category">Duration (hours)</label>
-        <input type="text" id="duration" name="duration" class="span2" value="" data-slider-step="0.5" data-slider-min="0" data-slider-max="6"
+        <input type="text" id="duration" name="duration" class="span2" value="" data-slider-step="0.5" data-slider-min="0"
+        data-slider-max="<%= @max_duration %>"
 
         data-slider-value="[<%= params[:duration].nil? || params[:duration].empty? ? 0.5 : params[:duration].split(",").first%>,
         <%= params[:duration].nil? || params[:duration].empty? ? 5.5 : params[:duration].split(",").last %>]"/>
@@ -33,7 +34,7 @@
       <div class="filter-box-element">
         <label for="price">Price (€)</label>
         <input type="text" id="price" name="price" class="span2" value="" data-slider-step="1" data-slider-min="0"
-        data-slider-max= "40"
+        data-slider-max= "<%= @max_price %>"
 
         data-slider-value="[<%= params[:price].nil? || params[:price].empty? ? 5 : params[:price].split(",").first%>,
         <%= params[:price].nil? || params[:price].empty? ? 35 : params[:price].split(",").last %>]"/>

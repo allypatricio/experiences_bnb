@@ -5,6 +5,20 @@ class ExperiencesController < ApplicationController
     @no_container = true
     @experiences = Experience.all
 
+    durations = []
+    @experiences.each do |exp|
+      durations << exp.duration
+    end
+
+    @max_duration = durations.max.to_i + 1
+
+    prices = []
+    @experiences.each do |exp|
+      prices << exp.price
+    end
+
+    @max_price = prices.max.to_i + 10
+
     if params[:search].present?
       @experiences = @experiences = Experience.perform_search(params[:search])
       @experiences = @experiences.category(params[:category].downcase.capitalize).perform_search(params[:search]) if params[:category].present? && !params[:category].empty?
