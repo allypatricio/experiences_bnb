@@ -20,7 +20,7 @@
       </div>
 
       <div class="filter-box-element">
-        <label for="category">Duration</label>
+        <label for="category">Duration (hours)</label>
         <input type="text" id="duration" name="duration" class="span2" value="" data-slider-step="0.5" data-slider-min="0" data-slider-max="6"
 
         data-slider-value="[<%= params[:duration].nil? || params[:duration].empty? ? 0.5 : params[:duration].split(",").first%>,
@@ -28,7 +28,7 @@
       </div>
 
       <div class="filter-box-element">
-        <label for="price">Price</label>
+        <label for="price">Price (€)</label>
         <input type="text" id="price" name="price" class="span2" value="" data-slider-step="1" data-slider-min="0"
         data-slider-max= "40"
 
