@@ -1,4 +1,4 @@
-<div class="message">
+<div class="message" data-booking-id="<%= booking.id %>">
   <%  if User.find(booking.user_id).photo.url != nil %>
   <%= image_tag User.find(booking.user_id).photo.url(:thumnail), :class => "avatar avatar-border-turqoise" %>
   <% else %>
@@ -17,7 +17,7 @@
   <div class="message-status">
     <p class="status accepted">Booked</p>
     <p class="message-price"><%=@experiences.find(booking.experience_id).price.to_i%>€</p>
-    <%= link_to experience_booking_path(@experiences.find(booking.experience_id), booking), :method => "delete", :class => "message-link" do %>
+    <%= link_to experience_booking_path(@experiences.find(booking.experience_id), booking), method: :delete,remote: true, :class => "message-link" do %>
     <i class="far fa-trash-alt"></i>
     <%end%>
   </div>
