@@ -52,11 +52,9 @@ input[type="radio"], input[type="checkbox"] {
   position: relative;
 }
 
-input[type="checkbox"]
-{
-  position: absolute;
-  left: 25vh;
-  bottom: 52.35%;
+input[type="checkbox"] {
+  float: left;
+  margin-right: 10px;
 }
 
 

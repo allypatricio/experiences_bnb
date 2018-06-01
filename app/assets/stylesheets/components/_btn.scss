@@ -99,6 +99,9 @@
     border: 2px solid white;
     font-size: 17px
   }
+  &:focus {
+    outline: none !important;
+  }
 }
 .back-button-pink {
   color: #F0869F;
@@ -112,6 +115,9 @@
     text-decoration: none;
     color: #F0869F;
     opacity: 0.5;
+  }
+  &:focus {
+    outline: none !important;
   }
 }
 
