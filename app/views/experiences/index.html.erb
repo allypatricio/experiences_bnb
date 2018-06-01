@@ -9,6 +9,8 @@
   <div id="filter-box">
     <form action="#experiences" method="get">
 
+      <input type="hidden" id="searchquery" name="search" value=<%= params[:search] %>>
+
       <div class="filter-box-element">
         <label for="category">Category</label>
         <select id="category" name="category" placeholder="Category" class="input-box no-margin">

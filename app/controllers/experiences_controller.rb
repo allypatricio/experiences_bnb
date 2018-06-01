@@ -2,15 +2,20 @@ class ExperiencesController < ApplicationController
   before_action :set_experience, only: [:show, :edit, :update, :destroy]
 
   def index
-    @experiences = Experience.all
-    @experiences = @experiences = Experience.perform_search(params[:search]) if params[:search].present?
-    @experiences = @experiences.category(params[:category].downcase.capitalize) if params[:category].present? && !params[:category].empty?
-    @experiences = @experiences.duration(params[:duration]) if params[:duration].present?
-    @experiences = @experiences.price(params[:price]) if params[:price].present?
-
     @no_container = true
-  end
+    @experiences = Experience.all
 
+    if params[:search].present?
+      @experiences = @experiences = Experience.perform_search(params[:search])
+      @experiences = @experiences.category(params[:category].downcase.capitalize).perform_search(params[:search]) if params[:category].present? && !params[:category].empty?
+      @experiences = @experiences.duration(params[:duration]).perform_search(params[:search]) if params[:duration].present?
+      @experiences = @experiences.price(params[:price]).perform_search(params[:search]) if params[:price].present?
+    else
+      @experiences = @experiences.category(params[:category].downcase.capitalize) if params[:category].present? && !params[:category].empty?
+      @experiences = @experiences.duration(params[:duration]) if params[:duration].present?
+      @experiences = @experiences.price(params[:price]) if params[:price].present?
+    end
+  end
 
   def show
     @no_container = true
