@@ -2,7 +2,7 @@ import Typed from 'typed.js';
 
 function loadDynamicBannerText() {
   new Typed('#typed-text', {
-    strings: ["beach", "surfing", "fishing", "food", "music"],
+    strings: ["sports", "food", "culture", "music", "sightseeing"],
     typeSpeed: 135,
     loop: true
   });

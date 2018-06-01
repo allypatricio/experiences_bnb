@@ -55,42 +55,5 @@
   color: lightgrey;
 }
 
-.nav-pills {
-  a{
-  color: #F0869F;
-  border: 1px solid #F0869F;
-}
-}
 
-    .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-        color: white;
-        background-color: #F0869F !important;
-        border: 1px solid #F0869F;
-    }
-
-    .nav > li > a:hover, .nav > li > a:focus {
-        text-decoration: none;
-        background-color: white !important;
-        color: #F0869F;
-;
-    }
-
-    .applycolor {
-        background-color: white;
-        text-decoration: none;
-        color: black !important ;
-    }
-
-    .applycolor:hover {
-        background-color: white;
-        text-decoration: none;
-        color: black !important;
-    }
-.message-link{
-  color: black;
-  &:hover {
-    opacity: 0.6;
-    color: black;
-}
-}
 
