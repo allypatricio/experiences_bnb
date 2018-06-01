@@ -1,10 +1,10 @@
-<div class="edit-form">
+<!-- <div class="edit-form"> -->
   <div class="form-wrapper">
-    <div class="upload-form-background"></div>
-
+    <!-- <div class="upload-form-background"></div> -->
+<div class="form-background" ></div>
     <div class="form-container col-sm-5">
       <div class="form-card">
-        <h1>Add a new experience</h1>
+        <h1>Add a New Experience</h1>
         <%= simple_form_for(@experience) do |f| %>
         <%= f.error_notification %>
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -21,7 +21,7 @@
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit %>
+          <%= f.button :submit, "Add", :class => "form-button" %>
         </div>
         <% end %>
       </div>
