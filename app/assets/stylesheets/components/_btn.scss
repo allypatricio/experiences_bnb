@@ -1,0 +1,122 @@
+/*Form Buttons */
+/*sign up, log in, edit, create*/
+.form-button {
+  border-radius: 4px;
+  background-color: #86E7DF;
+  color: #2c2d33;
+  width: 100%;
+  &:hover {
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: 17.5px;
+  }
+}
+
+/*Banner Button*/
+.button-banner{
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: #86E7DF;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: white;
+    padding: 9px 18px;
+    font-size: 17px;
+  }
+}
+
+/*Filter Button*/
+.btn-filter {
+  color: #F0869F;
+  border: solid 2px #F0869F;
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color: white;
+  &:hover {
+    text-decoration: none;
+    color: #F0869F;
+    padding: 4px 18px;
+    font-size: 17px;
+    opacity: 1px !important;
+  }
+}
+
+/*Message Buttons*/
+.nav-pills {
+  a{
+    color: #F0869F;
+    border: 1px solid #F0869F;
+  }
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  color: white;
+  background-color: #F0869F !important;
+  border: 1px solid #F0869F;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  text-decoration: none;
+  background-color: white !important;
+  color: #F0869F;
+  ;
+}
+
+.applycolor {
+  background-color: white;
+  text-decoration: none;
+  color: black !important ;
+}
+
+.applycolor:hover {
+  background-color: white;
+  text-decoration: none;
+  color: black !important;
+}
+.message-link{
+  color: black;
+  &:hover {
+    opacity: 0.6;
+    color: black;
+  }
+}
+
+/*Experiences - Show Buttons*/
+.btn-book-now {
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: #F0869F;
+  color: white !important;
+  border: none !important;
+  &:hover {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    font-size: 17px
+  }
+}
+.back-button-pink {
+  color: #F0869F;
+  border: solid 2px #F0869F;
+  padding: 10px 30px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 20px;
+  left: 26px;
+  &:hover {
+    text-decoration: none;
+    color: #F0869F;
+    opacity: 0.5;
+  }
+}
+
+
+
+
+
+
+
+
+

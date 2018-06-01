@@ -21,23 +21,12 @@
 .banner p {
   font-size: 30px;
   font-weight: lighter;
-  color: white;
+  color: #2c2d33;
   opacity: 0.8;
   text-shadow: 1px 1px 0.5px;
   padding-bottom: 25px;
 }
 
-.button-banner{
-  padding: 10px 20px;
-  border-radius: 4px;
-  background-color: #86E7DF;
-  color: #2c2d33;
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-    color: white;
-    }
-}
 
 
 
