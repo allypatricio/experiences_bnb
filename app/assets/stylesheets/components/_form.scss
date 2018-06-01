@@ -58,6 +58,12 @@
   }
 }
 
+input[type="radio"], input[type="checkbox"] {
+  box-shadow: none !important;
+  transition: none !important;
+  height: 15px !important;
+}
+
 
 
 
