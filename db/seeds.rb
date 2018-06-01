@@ -37,10 +37,10 @@ p "Created 5 users: test@test.com and 4 random e-mail addresses. All users have 
 
 ADDRESSES = ["Cais do Sodre, Lisbon, Portugal", "Cascais, Portugal", "Sintra, Portugal", "Porto, Portugal", "Sagres, Portugal", "Faro, Portugal", "Serra d'Estrella, Portugal", "Costa da Caparica, Portugal", "Setubal, Portugal", "Carcavelos, Portugal"]
 PHOTO_URLS = [
-  "http://dqndusk8a84ol.cloudfront.net/image/53ad79112b255e943e1e2a842d685952.jpg?&x=1500&y=460&cx=0&cy=41&cw=3000&ch=919&icq=74&sig=388af7b42cab78324ee328ab7943a38e",
-  "https://assets.entrepreneur.com/content/3x2/1300/20150608231057-surfing-water-waves.jpeg",
-  "http://tamarazidar.com/wp-content/uploads/2015/09/TamaraZidar_RawFoodWorkshop8-940x627.jpg",
-  "http://www.insidelisbon.com/wp-content/uploads/2017/08/IMG-20170727-WA0004_1300_2.jpg"]
+  "https://images.unsplash.com/photo-1519789110007-0e751882be76?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ffcb4d8d9dff9ef47b3330b7fa63b162&auto=format&fit=crop&w=1458&q=80",
+  "https://images.unsplash.com/photo-1516710089018-96725b621d01?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ca99f5235ffb5ba1ea95cc3b635d44cf&auto=format&fit=crop&w=1050&q=80",
+  "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b5ecaef0464fc50a866e74a6176c3fdc&auto=format&fit=crop&w=1050&q=80",
+  "https://images.unsplash.com/photo-1493807742375-fbc46d996e8f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6f0038573a81b1169576b6674a3ce202&auto=format&fit=crop&w=1552&q=80"]
 
 20.times do
   experience = Experience.new({
