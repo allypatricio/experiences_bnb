@@ -62,8 +62,16 @@ input[type="radio"], input[type="checkbox"] {
   box-shadow: none !important;
   transition: none !important;
   height: 15px !important;
+  width: 15px !important;
+  position: relative;
 }
 
+input[type="checkbox"]
+{
+  position: absolute;
+  left: 25vh;
+  bottom: 52.35%;
+}
 
 
 
