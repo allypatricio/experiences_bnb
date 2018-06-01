@@ -28,7 +28,7 @@
         data-slider-max="<%= @max_duration %>"
 
         data-slider-value="[<%= params[:duration].nil? || params[:duration].empty? ? 0.5 : params[:duration].split(",").first%>,
-        <%= params[:duration].nil? || params[:duration].empty? ? 5.5 : params[:duration].split(",").last %>]"/>
+        <%= params[:duration].nil? || params[:duration].empty? ? @max_duration-0.5 : params[:duration].split(",").last %>]"/>
       </div>
 
       <div class="filter-box-element">
@@ -37,7 +37,7 @@
         data-slider-max= "<%= @max_price %>"
 
         data-slider-value="[<%= params[:price].nil? || params[:price].empty? ? 5 : params[:price].split(",").first%>,
-        <%= params[:price].nil? || params[:price].empty? ? 35 : params[:price].split(",").last %>]"/>
+        <%= params[:price].nil? || params[:price].empty? ? @max_price-5 : params[:price].split(",").last %>]"/>
       </div>
 
       <div class="filter-box-element">
