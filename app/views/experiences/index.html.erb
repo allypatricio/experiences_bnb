@@ -5,26 +5,42 @@
 </div>
 <%end%>
 
-<div class="text-center">
-  <form action="#experiences" method="get">
-    <label for="category">Category</label>
-    <input type="text" id="category" name="category" placeholder="Category">
+<div class="container text-center">
+  <div id="filter-box">
+    <form action="#experiences" method="get">
 
-    <label for="category">Duration</label>
-    <input type="text" id="duration" name="duration" class="span2" value="" data-slider-step="0.5" data-slider-min="0" data-slider-max="6"
+      <div class="filter-box-element">
+        <label for="category">Category</label>
+        <select id="category" name="category" placeholder="Category" class="input-box no-margin">
+          <option></option>
+          <% Experience::CATEGORIES.each do |category| %>
+            <option><%= category %></option>
+          <% end %>
+        </select>
+      </div>
 
-    data-slider-value="[<%= params[:duration].nil? || params[:duration].empty? ? 0.5 : params[:duration].split(",").first%>,
-    <%= params[:duration].nil? || params[:duration].empty? ? 25 : params[:duration].split(",").last %>]"/>
+      <div class="filter-box-element">
+        <label for="category">Duration</label>
+        <input type="text" id="duration" name="duration" class="span2" value="" data-slider-step="0.5" data-slider-min="0" data-slider-max="6"
 
-    <label for="category">Price</label>
-    <input type="text" id="price" name="price" class="span2" value="" data-slider-step="1" data-slider-min="5"
-     data-slider-max= "40"
+        data-slider-value="[<%= params[:duration].nil? || params[:duration].empty? ? 0.5 : params[:duration].split(",").first%>,
+        <%= params[:duration].nil? || params[:duration].empty? ? 5.5 : params[:duration].split(",").last %>]"/>
+      </div>
 
-     data-slider-value="[<%= params[:price].nil? || params[:price].empty? ? 15 : params[:price].split(",").first%>,
-     <%= params[:price].nil? || params[:price].empty? ? 25 : params[:price].split(",").last %>]"/>
+      <div class="filter-box-element">
+        <label for="price">Price</label>
+        <input type="text" id="price" name="price" class="span2" value="" data-slider-step="1" data-slider-min="0"
+        data-slider-max= "40"
 
-    <input type="submit">
-  </form>
+        data-slider-value="[<%= params[:price].nil? || params[:price].empty? ? 5 : params[:price].split(",").first%>,
+        <%= params[:price].nil? || params[:price].empty? ? 35 : params[:price].split(",").last %>]"/>
+      </div>
+
+      <div class="filter-box-element">
+        <input type="submit" value="Apply filters" class="btn-filter">
+      </div>
+    </form>
+  </div>
 </div>
 
 
@@ -45,3 +61,4 @@
   var slider = new Slider('#price', {});
   </script>
 <% end %>
+
