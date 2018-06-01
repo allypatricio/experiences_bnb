@@ -1,0 +1,51 @@
+#filter-box {
+  input, label, select {
+      display:block;
+  }
+}
+
+.filter-box-element {
+  align-items: center;
+  float: left;
+  width: 25%;
+  height: 70px;
+  &:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.slider-handle {
+  background-color: #F0869F !important;
+  background-image: none !important;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);;
+}
+
+.btn-filter {
+  color: #F0869F;
+  border: solid 2px #F0869F;
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color: white;
+  &:hover {
+    text-decoration: none;
+    color: #F0869F;
+    opacity: 0.5;
+  }
+}
+
+.no-margin {
+  margin: auto
+}
+
+.input-box {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #DBDBDB;
+  background-color: white !important;
+  width: 15vw;
+  &:focus {
+    outline: none !important;
+  }
+}
