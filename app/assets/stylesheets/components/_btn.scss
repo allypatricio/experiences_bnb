@@ -41,6 +41,9 @@
     font-size: 17px;
     opacity: 1px !important;
   }
+   &:focus {
+    outline: none !important;
+  }
 }
 
 /*Message Buttons*/
