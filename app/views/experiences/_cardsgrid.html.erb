@@ -1,0 +1,4 @@
+<div class="card-container no-gutters">
+<% @experiences.in_groups_of(5, Experience.new) do |group| %>
+    <%= group_cards_experiences(group) %>
+<%end%>

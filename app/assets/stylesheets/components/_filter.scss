@@ -16,16 +16,6 @@
   }
 }
 
-.slider-handle {
-  background-color: #F0869F !important;
-  background-image: none !important;
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);;
-}
-
-.no-margin {
-  margin: auto
-}
-
 .input-box {
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -36,3 +26,25 @@
     outline: none !important;
   }
 }
+
+.slider-handle {
+  background-color: #F0869F !important;
+  background-image: none !important;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);;
+}
+
+
+.tooltip-inner {
+  background-color: #F0869F !important;
+  font-weight: bolder;
+}
+
+.tooltip-arrow {
+  border-top-color: #F0869F !important;
+}
+
+.no-margin {
+  margin: auto
+}
+
+
